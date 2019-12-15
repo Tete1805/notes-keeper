@@ -1,15 +1,15 @@
 import React, { FC, ReactNode } from 'react';
-import { blue, indigo } from '@material-ui/core/colors';
+import { cyan, green } from '@material-ui/core/colors';
 import { createMuiTheme } from '@material-ui/core/styles';
 import { ThemeProvider } from '@material-ui/styles';
 
 const theme = createMuiTheme({
   palette: {
     secondary: {
-      main: blue[900]
+      main: green[700]
     },
     primary: {
-      main: indigo[700]
+      main: cyan[700]
     }
   },
   typography: {

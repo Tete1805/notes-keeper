@@ -1,4 +1,4 @@
 export default interface Note {
-  title: string;
+  index: number;
   content: string;
 }

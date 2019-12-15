@@ -2,7 +2,7 @@ import { makeStyles } from '@material-ui/core';
 
 export const styles = makeStyles(theme => ({
   root: {
-    height: '100vh'
+    height: '100%'
   },
   paper: {
     margin: theme.spacing(8, 4),

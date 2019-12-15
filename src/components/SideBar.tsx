@@ -1,27 +1,29 @@
-import React, { ReactNode } from 'react';
+import React from 'react';
 
 import NotePreview from './NotePreview';
 
-import Note from '../types/Note';
+import { ContentState } from 'draft-js';
 
 interface SideBarProps {
-  notes: Note[];
-  setCurrentNote: Function;
+  notes?: ContentState[];
+  currentNoteIndex: number;
+  setCurrentNoteIndex: Function;
 }
 
-const SideBar: React.FC<SideBarProps> = ({ notes, setCurrentNote }) => {
+const SideBar: React.FC<SideBarProps> = ({ notes, setCurrentNoteIndex }) => {
   return (
     <div>
       <ul style={{ listStyle: 'none', margin: 0, padding: '10px' }}>
-        {notes.map(note => (
-          <li
-            key={note.title}
-            style={{ padding: '5px 0' }}
-            onClick={() => setCurrentNote(note)}
-          >
-            <NotePreview note={note}></NotePreview>
-          </li>
-        ))}
+        {notes &&
+          notes.map((note, index) => (
+            <li
+              key={index}
+              style={{ padding: '5px 0' }}
+              onClick={() => setCurrentNoteIndex(index)}
+            >
+              <NotePreview note={note}></NotePreview>
+            </li>
+          ))}
       </ul>
     </div>
   );
