@@ -2,7 +2,6 @@ import React, { FC, ReactNode, useState } from 'react';
 import Grid from '@material-ui/core/Grid';
 
 import Editor from './Editor';
-import NavBar from './NavBar';
 import Sidebar from './SideBar';
 
 import { styles } from './Main.styles';
@@ -26,7 +25,6 @@ const Main: FC<MainChildren> = () => {
 
   return (
     <div className={classes.root}>
-      <NavBar></NavBar>
       <Grid container>
         <Grid item xs={12} sm={3}>
           <Sidebar notes={notes} setCurrentNote={setCurrentNote}></Sidebar>
