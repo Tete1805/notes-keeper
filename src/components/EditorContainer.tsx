@@ -18,18 +18,12 @@ const EditorContainer: React.FC<EditorContainerProps> = ({
 }) => {
   let timeout: any = null;
 
-  const handleChange = (state: any) => {
-    if (timeout) clearTimeout(timeout);
-    timeout = setTimeout(
-      () =>
-        dispatch({
-          type: 'NK_UPDATE_NOTE_CONTENT',
-          content: state.getCurrentContent(),
-          editorState: state
-        }),
-      100
-    );
-  };
+  const handleChange = (state: any) =>
+    dispatch({
+      type: 'NK_UPDATE_NOTE_CONTENT',
+      content: state.getCurrentContent(),
+      editorState: state
+    });
 
   return (
     <Container component="main" maxWidth={false} style={{ marginTop: '15px' }}>

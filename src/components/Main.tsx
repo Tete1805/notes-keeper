@@ -27,7 +27,6 @@ const Main: FC<MainChildren> = () => {
       case 'NK_SET_CURRENT_NOTE':
         newState.currentNoteIndex = action.index;
         newState.currentNoteContent = action.content;
-        newState.editorState.getSelection().clear();
         newState.editorState = EditorState.createWithContent(action.content);
         break;
       case 'NK_ADD_NEW_NOTE':
