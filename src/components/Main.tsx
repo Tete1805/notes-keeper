@@ -1,7 +1,7 @@
 import React, { FC, ReactNode, useState } from 'react';
 import Grid from '@material-ui/core/Grid';
 
-import Editor from './Editor';
+import EditorContainer from './EditorContainer';
 import Sidebar from './SideBar';
 
 import { styles } from './Main.styles';
@@ -30,7 +30,10 @@ const Main: FC<MainChildren> = () => {
           <Sidebar notes={notes} setCurrentNote={setCurrentNote}></Sidebar>
         </Grid>
         <Grid item xs={12} sm={9}>
-          <Editor currentNote={currentNote}></Editor>
+          <EditorContainer
+            currentNote={currentNote}
+            setCurrentNote={setCurrentNote}
+          ></EditorContainer>
         </Grid>
       </Grid>
     </div>
