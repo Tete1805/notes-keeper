@@ -36,22 +36,22 @@ const Main: FC<MainChildren> = () => {
   return (
     <div className={classes.root}>
       <Grid container>
+        <Grid item xs={12} sm={9}>
+          <EditorContainer
+            content={currentNoteContent}
+            setContent={setCurrentNoteContent}
+          ></EditorContainer>
+        </Grid>
         <Grid item xs={12} sm={3}>
           <br></br>
           <Button onClick={addNewNote} variant="contained" color="secondary">
-            Add
+            Ajouter une nouvelle note
           </Button>
           <Sidebar
             notes={notes}
             setCurrentNoteIndex={setCurrentNoteIndex}
             currentNoteIndex={currentNoteIndex}
           ></Sidebar>
-        </Grid>
-        <Grid item xs={12} sm={9}>
-          <EditorContainer
-            content={currentNoteContent}
-            setContent={setCurrentNoteContent}
-          ></EditorContainer>
         </Grid>
       </Grid>
     </div>

@@ -55,6 +55,7 @@ const EditorContainer: React.FC<EditorContainerProps> = ({
           editorState={editorState}
           editorClassName="editorClassName"
           onEditorStateChange={state => setEditorState(state)}
+          placeholder="Commencez à taper ici..."
         ></Editor>
       </Paper>
     </Container>

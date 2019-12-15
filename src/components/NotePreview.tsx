@@ -26,12 +26,14 @@ export default function NotePreview(props: NotePreviewProps) {
     .map(block => block.getText())
     .join(' ');
 
-  return (
+  return content.length > 1 ? (
     <Paper className={classes.root} style={{ padding: '20px' }}>
       <Typography component="p">
         {content.slice(0, 220)}
         {content.length > 220 ? '...' : ''}
       </Typography>
     </Paper>
+  ) : (
+    <></>
   );
 }
