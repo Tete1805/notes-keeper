@@ -7,10 +7,10 @@ import { ContentState } from 'draft-js';
 interface SideBarProps {
   notes?: ContentState[];
   currentNoteIndex: number;
-  setCurrentNoteIndex: Function;
+  dispatch: Function;
 }
 
-const SideBar: React.FC<SideBarProps> = ({ notes, setCurrentNoteIndex }) => {
+const SideBar: React.FC<SideBarProps> = ({ notes, dispatch }) => {
   return (
     <div>
       <ul style={{ listStyle: 'none', margin: 0, padding: '10px' }}>
@@ -19,7 +19,9 @@ const SideBar: React.FC<SideBarProps> = ({ notes, setCurrentNoteIndex }) => {
             <li
               key={index}
               style={{ padding: '5px 0' }}
-              onClick={() => setCurrentNoteIndex(index)}
+              onClick={() =>
+                dispatch({ type: 'NK_SET_CURRENT_NOTE', content: note, index })
+              }
             >
               <NotePreview note={note}></NotePreview>
             </li>

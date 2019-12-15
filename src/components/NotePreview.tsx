@@ -21,19 +21,19 @@ interface NotePreviewProps {
 export default function NotePreview(props: NotePreviewProps) {
   const classes = useStyles();
 
-  const content = props.note
-    .getBlocksAsArray()
-    .map(block => block.getText())
-    .join(' ');
+  const content = props.note.getBlocksAsArray
+    ? props.note
+        .getBlocksAsArray()
+        .map(block => block.getText())
+        .join(' ')
+    : '';
 
-  return content.length > 1 ? (
+  return (
     <Paper className={classes.root} style={{ padding: '20px' }}>
       <Typography component="p">
         {content.slice(0, 220)}
         {content.length > 220 ? '...' : ''}
       </Typography>
     </Paper>
-  ) : (
-    <></>
   );
 }
