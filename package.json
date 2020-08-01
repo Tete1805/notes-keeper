@@ -5,12 +5,12 @@
   "dependencies": {
     "@material-ui/core": "^4.7.2",
     "@material-ui/icons": "^4.5.1",
-    "@testing-library/jest-dom": "^4.2.4",
-    "@testing-library/react": "^9.3.2",
-    "@testing-library/user-event": "^7.1.2",
+    "@testing-library/jest-dom": "^5.11.2",
+    "@testing-library/react": "^10.4.7",
+    "@testing-library/user-event": "^12.1.0",
     "@types/draft-js": "^0.10.37",
-    "@types/jest": "^24.0.0",
-    "@types/node": "^12.0.0",
+    "@types/jest": "^26.0.8",
+    "@types/node": "^14.0.27",
     "@types/react": "^16.9.0",
     "@types/react-dom": "^16.9.0",
     "@types/react-draft-wysiwyg": "^1.13.0",
@@ -21,8 +21,8 @@
     "react-draft-wysiwyg": "^1.14.1",
     "react-froala-wysiwyg": "^3.0.6",
     "react-router-dom": "^5.1.2",
-    "react-scripts": "3.3.0",
-    "typescript": "~3.7.2"
+    "react-scripts": "3.4.1",
+    "typescript": "^3.9.7"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -48,7 +48,7 @@
     ]
   },
   "devDependencies": {
-    "fibers": "^4.0.2",
+    "fibers": "^5.0.0",
     "node-sass": "^4.13.0",
     "sass": "^1.23.7"
   }
